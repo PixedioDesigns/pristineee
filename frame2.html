@@ -18,36 +18,56 @@
 
   <body>
     <div class="lg:max-w-[1100px] w-full mx-auto">
-        <div class="bg-black">
+      <div class="bg-black">
         <div class="lg:block hidden">
           <nav
             class="container flex bg-black"
-            style="display: flex; justify-content: space-between"
+            style="display: flex; justify-content: space-between; height: 80px"
           >
             <div style="width: 40%">
               <img src="./img/hd3.png" alt="Image" class="h-full w-100" />
             </div>
-            <div class="lg:gap-11 gap-4" style="display: flex;justify-content: space-between; align-items: center;padding-right: 10px;">
+            <div
+              style="
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5%;
+                
+              "
+            >
               <a
                 href="/"
-                class="cursor-pointer 2xl:text-[20px] text-base text-white"
+                class="cursor-pointer 2xl:text-[20px] text-base text-white nav-link"
                 >Home</a
               >
-              <span class="text-white text-2xl">|</span>
+              <span
+                class="text-white text-2xl"
+                style="border: 1px solid white; height: 50%"
+              ></span>
 
               <a
                 href="frame3.html"
-                class="cursor-pointer 2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap"
+                class="cursor-pointer 2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap nav-link"
                 >Servers & Pricing</a
               >
-              <span class="text-white text-2xl">|</span>
-              <a href="frame4.html" class="2xl:text-[20px] text-base text-white"
+              <span
+                class="text-white text-2xl"
+                style="border: 1px solid white; height: 50%"
+              ></span>
+              <a
+                href="frame4.html"
+                class="2xl:text-[20px] text-base text-white nav-link"
                 >Support</a
               >
-              <span class="text-white text-2xl">|</span>
+              <span
+                class="text-white text-2xl"
+                style="border: 1px solid white; height: 50%"
+              ></span>
               <a
                 href="frame2.html"
-                class="2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap"
+                class="2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap nav-link"
                 >More Info</a
               >
             </div>
@@ -60,21 +80,31 @@
               <div class="w-28">
                 <img src="./img/logo.png" alt="Logo" />
               </div>
-              <div class="lg:gap-11 gap-4" style="display: flex;justify-content: space-between; align-items: center;padding-right: 10px;">
+              <div
+                class="lg:gap-11 gap-4"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding-right: 10px;
+                "
+              >
                 <a
                   href="/"
                   class="cursor-pointer 2xl:text-[20px] text-base text-white"
                   >Home</a
                 >
                 <span class="text-white text-2xl">|</span>
-  
+
                 <a
                   href="frame3.html"
                   class="cursor-pointer 2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap"
                   >Servers & Pricing</a
                 >
                 <span class="text-white text-2xl">|</span>
-                <a href="frame4.html" class="2xl:text-[20px] text-base text-white"
+                <a
+                  href="frame4.html"
+                  class="2xl:text-[20px] text-base text-white"
                   >Support</a
                 >
                 <span class="text-white text-2xl">|</span>
@@ -186,11 +216,13 @@
               any of our plans. We aren't a sawdust joint and we care about our
               customers. Just look at our rap sheet
             </p>
-            <button
-              class="md:w-[477px] w-full h-[56px] text-center bg-[#B17D0F] text-white times hover:bg-opacity-90"
-            >
-              Buy Now
-            </button>
+            <a href="frame3.html">
+              <button
+                class="md:w-[477px] w-full h-[56px] text-center bg-[#B17D0F] text-white times hover:bg-opacity-90"
+              >
+                Buy Now
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -237,6 +269,5 @@
         }
       };
     </script>
-
   </body>
 </html>
