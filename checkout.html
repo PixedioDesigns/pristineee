@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
     />
+    <script src="https://js.stripe.com/v3/"></script>
     <!-- Abrial Fat Face Font Ends Here -->
     <title>Mini Craft</title>
   </head>
@@ -19,7 +20,7 @@
   <body>
     <div class="lg:max-w-[1100px] w-full mx-auto">
       <div class="bg-black">
-        <div class="lg:block hidden">
+        <!-- <div class="lg:block hidden">
           <nav
             class="container mx-auto px-4 flex justify-center lg:gap-14 gap-4"
           >
@@ -74,10 +75,10 @@
               >
             </div>
           </nav>
-        </div>
-        <div class="lg:hidden block">
+        </div> -->
+        <!-- <div class="lg:hidden block"> -->
           <!-- Navbar -->
-          <div class="relative lg:hidden 2xl:mx-auto 2xl:container w-full p-2">
+          <!-- <div class="relative lg:hidden 2xl:mx-auto 2xl:container w-full p-2">
             <div class="flex justify-between items-center pt1-8">
               <div class="w-28">
                 <img src="./img/logo.png" alt="Logo" />
@@ -117,10 +118,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!--  -->
           <!--Mobile responsive sidebar-->
-          <div
+          <!-- <div
             class="bg-gray-50 fixed left-0 top-0 w-full h-full transform -translate-x-full z-40 transition duration-700 lg:hidden"
             id="mobile-nav"
           >
@@ -174,11 +175,11 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- end -->
           <!--  -->
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
       <!--  -->
       <div class="bg-[#B17D0F]">
         <div
@@ -186,26 +187,20 @@
         >
           <div class="lg:max-w-[1157px] w-full">
             <p class="text-white lg:text-[50px] text-4xl abril font-normal">
-              Contact us
+              Checkout
             </p>
             <div class="lg:max-w-[1157px] w-full bg-[#353F4B] px-7 py-7 mt-8">
-              <p class="text-white text-[33px] abril font-normal">
-                Get in Touch with us
+              <p class="text-white text-[33px] abril font-normal inline" >
+              Subscribe for  
+              </p>    
+              <p class="text-white text-[33px] abril font-normal inline" id="plan__desc">
+                
               </p>
-              <form action="https://api.web3forms.com/submit" method="POST">
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="ccf02980-9a28-40ab-8bd4-7ed0a6a60a95"
-                />
-                <p class="text-white text-[18px] font-bold mt-8 mb-5 times">
-                  Full Name
-                </p>
-                <input
-                  type="text"
-                  class="outline-none text-white px-4 bg-transparent w-full h-12 border"
-                  name="name"
-                />
+              <p class="text-white text-[33px] abril font-normal inline" >
+                $/ month
+              </p>
+              <form id="payment-form">
+ 
                 <p class="text-white text-[18px] font-bold mb-5 times mt-4">
                   Email Address
                 </p>
@@ -213,71 +208,30 @@
                   type="email"
                   class="outline-none text-white px-4 bg-transparent w-full h-12 border"
                   name="email"
+                  id="email"
                 />
                 <p class="text-white text-[18px] font-bold mb-5 times mt-4">
-                  Phone Number
-                </p>
-                <input
-                  type="number"
-                  class="outline-none text-white px-4 bg-transparent w-full h-12 border"
-                  name="phone"
-                />
-                <p class="text-white text-[18px] font-bold mb-5 times mt-4">
-                  Your Message
-                </p>
-                <textarea
-                  class="outline-none text-white px-4 bg-transparent w-full h-[215px] border mb-8"
-                  name="message"
-                ></textarea>
+                    Credit or debit card
+                  </p>
+
+                  <div id="card-element" class="outline-none text-white px-4 bg-transparent w-full h-12 border" style="color: white;">
+                    <!-- A Stripe Elements instance will be mounted here -->
+                  </div>
+      
+                  <!-- Any error messages will be mounted here -->
+                  <div id="card-errors" role="alert"></div>
+      
+   
                 <button
                   class="md:max-w-[229px] w-full h-[70px] text-center bg-[#B17D0F] text-white times hover:bg-opacity-90"
                   type="submit"
                 >
-                  Send Message
+                  Buy Now
                 </button>
               </form>
             </div>
           </div>
-          <div>
-            <p class="text-white lg:text-[50px] text-4xl abril font-normal">
-              Support
-            </p>
-            <div
-              class="bg-[#353F4B] px-8 pt-10 pb-14 rounded-lg lg:max-w-[578px] w-full mt-8"
-            >
-              <div class="text-white text-[18px] font-normal times">
-                Feel free to reach out to us with any questions or concern. We
-                make sure all our customers are taken care of and have the best
-                experience.
-              </div>
-              <div class="mt-10 flex items-center gap-7">
-                <div
-                  class="rounded-full w-[52px] h-[52px] bg-[#D4AF37] flex justify-center items-center"
-                >
-                  <svg
-                    width="24"
-                    height="18"
-                    viewBox="0 0 24 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21.14 0H2.037C1.49708 0.00105712 0.979574 0.216007 0.597791 0.59779C0.216008 0.979572 0.00105712 1.49708 0 2.037L0 15.617C0.000793539 16.157 0.21566 16.6747 0.5975 17.0565C0.97934 17.4383 1.497 17.6532 2.037 17.654H21.137C21.677 17.6532 22.1947 17.4383 22.5765 17.0565C22.9583 16.6747 23.1732 16.157 23.174 15.617V2.037C23.1732 1.49751 22.9588 0.980311 22.5776 0.598557C22.1964 0.216802 21.6795 0.00158614 21.14 0ZM20.859 1.358L11.632 10.585L2.325 1.358H20.859ZM1.358 15.336V2.312L7.9 8.8L1.358 15.336ZM2.318 16.296L8.862 9.752L11.155 12.025C11.2822 12.1517 11.4545 12.2228 11.634 12.2228C11.8135 12.2228 11.9858 12.1517 12.113 12.025L14.349 9.789L20.859 16.3L2.318 16.296ZM21.818 15.336L15.31 8.827L21.819 2.318L21.818 15.336Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-white text-[17px] font-bold times">
-                    Email
-                  </div>
-                  <div class="text-white text-[24px] font-bold times mt-2">
-                    ezraenterprise1@outlook.com
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    
         </div>
       </div>
       <!--  -->
@@ -305,24 +259,161 @@
           </p>
         </div>
       </div>
+      <div
+      id="notification"
+      class="fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-gray-800 text-white rounded-md shadow-lg"
+    >
+      <span id="notificationText"></span>
+    </div>
     </div>
     <script>
       // Nav
-      let sideBar = document.getElementById("mobile-nav");
-      let menu = document.getElementById("menu");
-      let cross = document.getElementById("cross");
-      const sidebarHandler = (check) => {
-        if (check) {
-          sideBar.style.transform = "translateX(0px)";
-          menu.classList.add("hidden");
-          cross.classList.remove("hidden");
+    //   let sideBar = document.getElementById("mobile-nav");
+    //   let menu = document.getElementById("menu");
+    //   let cross = document.getElementById("cross");
+    //   const sidebarHandler = (check) => {
+    //     if (check) {
+    //       sideBar.style.transform = "translateX(0px)";
+    //       menu.classList.add("hidden");
+    //       cross.classList.remove("hidden");
+    //     } else {
+    //       sideBar.style.transform = "translateX(-100%)";
+    //       menu.classList.remove("hidden");
+    //       cross.classList.add("hidden");
+    //     }
+    //   };
+    function showNotification(message,redirectUrl) {
+  const notification = document.getElementById('notification');
+  const notificationText = document.getElementById('notificationText');
+
+  notificationText.innerText = message;
+  notification.style.display = 'block';
+
+  setTimeout(() => {
+    notification.style.display = 'none';
+    window.location.href = redirectUrl
+  }, 3000); // Hide the notification after 3 seconds
+}
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Fetch the parameter and render it
+    window.addEventListener('DOMContentLoaded', function() {
+      var parameterValue = getUrlParameter('plan');
+      document.getElementById('plan__desc').textContent = parameterValue;
+    });
+
+
+    if (document.getElementById('card-element')) {
+    /* Replace 'pk_test_************************' with your publishable key */
+    var stripe = Stripe('pk_test_51NN6JIGREri87tsDR9SJzwshfTcwfSOUwehH79uE3kSDilosJmqsiAkQ94qwHtQ4FxrmT5U7L2yhhSpSrvppiYWW004gXGjfwB');
+    var elements = stripe.elements();
+
+    /* Custom styling can be passed to options when creating an Element */
+    var style = {
+      base: {
+        fontSize: '16px', '::placeholder': { color: "#aab7c4"},
+        fontFamily: '"Open Sans", "Helvetica", sans-serif',
+        fontSmoothing: 'antialiased',
+      },
+      invalid: {
+        color: '#fa755a',
+        iconColor: '#fa755a'
+      }
+    };
+
+    /* Create a Stripe Elements instance 
+      and mount to the div with the id 'card-element' */
+
+    var card = elements.create('card', {style: style});
+
+    card.mount('#card-element');
+
+    /* Handle validation errors */
+    card.addEventListener('change', event => {
+      var displayError = document.getElementById('card-errors');
+      
+      if (event.error) {
+        displayError.textContent = event.error.message;
+      } else {
+        displayError.textContent = ''; 
+      }
+    });
+
+
+
+    /* Create a token when the form is submitted */
+    var form = document.getElementById('payment-form');
+
+    form.addEventListener('submit',async function(event) {
+      event.preventDefault();
+
+      const email= document.getElementById("email").value;
+      console.log(email)
+      
+  //     hiddenInput.setAttribute('value', getUrlParameter('id'));
+  //     form.appendChild(hiddenInput);
+     
+
+      stripe.createToken(card).then(async function(result) {
+        if (result.error) {
+          var errorElement = document.getElementById('card-errors');
+          errorElement.textContent = result.error.message;
         } else {
-          sideBar.style.transform = "translateX(-100%)";
-          menu.classList.remove("hidden");
-          cross.classList.add("hidden");
+          // stripeTokenHandler(result.token);
+          const data={
+            customerEmail:email,
+    stripeToken:result.token.id,
+    planId:getUrlParameter('id')
+  }
+
+  try {
+    const response = await fetch("http://localhost:8000/api/processPayment", {
+      method: "post",
+      body: JSON.stringify(data),
+      headers: {
+       'Content-Type': 'application/json'
+     },
+    });
+
+    if (response.ok) {
+      // Payment was successful
+      showNotification("Payment success","index.html");
+      
+    } else {
+      // Payment failed
+      showNotification("Payment Failed","index.html");
+    
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+         
         }
-      };
+      })
+  //     const formData = new FormData(event.target);
+
+      
+
+
+    });
+  }
+
+  function stripeTokenHandler(token) {
+    var form = document.getElementById('payment-form');
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', token.id);
+    form.appendChild(hiddenInput);
+  }
+
     </script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
+  
   </body>
 </html>
