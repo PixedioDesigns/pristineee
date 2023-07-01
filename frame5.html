@@ -21,55 +21,53 @@
       <div class="bg-black">
         <div class="lg:block hidden">
           <nav
-            class="container mx-auto px-4 flex justify-center lg:gap-14 gap-4"
+            class="container flex bg-black"
+            style="display: flex; justify-content: space-between; height: 80px"
           >
-            <div class="">
-              <img src="./img/hd3.png" alt="Image" class="pt-4" />
+            <div style="width: 40%">
+              <img src="./img/hd3.png" alt="Image" class="h-full w-100" />
             </div>
-            <div class="flex lg:gap-11 gap-4 items-center">
+            <div
+              style="
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5%;
+                
+              "
+            >
               <a
                 href="/"
-                class="cursor-pointer 2xl:text-[20px] text-base text-white"
+                class="cursor-pointer 2xl:text-[20px] text-base text-white nav-link"
                 >Home</a
               >
-              <svg
-                width="3"
-                height="62"
-                viewBox="0 0 3 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M1.5 0V62" stroke="white" stroke-width="2" />
-              </svg>
+              <span
+                class="text-white text-2xl"
+                style="border: 1px solid white; height: 50%"
+              ></span>
+
               <a
                 href="frame3.html"
-                class="cursor-pointer 2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap"
+                class="cursor-pointer 2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap nav-link"
                 >Servers & Pricing</a
               >
-              <svg
-                width="3"
-                height="62"
-                viewBox="0 0 3 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M1.5 0V62" stroke="white" stroke-width="2" />
-              </svg>
-              <a href="frame4.html" class="2xl:text-[20px] text-base text-white"
+              <span
+                class="text-white text-2xl"
+                style="border: 1px solid white; height: 50%"
+              ></span>
+              <a
+                href="frame4.html"
+                class="2xl:text-[20px] text-base text-white nav-link"
                 >Support</a
               >
-              <svg
-                width="3"
-                height="62"
-                viewBox="0 0 3 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M1.5 0V62" stroke="white" stroke-width="2" />
-              </svg>
+              <span
+                class="text-white text-2xl"
+                style="border: 1px solid white; height: 50%"
+              ></span>
               <a
                 href="frame2.html"
-                class="2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap"
+                class="2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap nav-link"
                 >More Info</a
               >
             </div>
@@ -82,39 +80,39 @@
               <div class="w-28">
                 <img src="./img/logo.png" alt="Logo" />
               </div>
-              <div class="flex gap-4 items-center">
-                <div>
-                  <button
-                    id="menu"
-                    aria-label="open menu"
-                    onclick="sidebarHandler(true)"
-                    class="text-gray-800"
-                  >
-                    <svg
-                      width="45"
-                      height="33"
-                      viewBox="0 0 45 33"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="45" height="5" rx="2.5" fill="white" />
-                      <rect
-                        y="14"
-                        width="45"
-                        height="5"
-                        rx="2.5"
-                        fill="white"
-                      />
-                      <rect
-                        y="28"
-                        width="45"
-                        height="5"
-                        rx="2.5"
-                        fill="white"
-                      />
-                    </svg>
-                  </button>
-                </div>
+              <div
+                class="lg:gap-11 gap-4"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding-right: 10px;
+                "
+              >
+                <a
+                  href="/"
+                  class="cursor-pointer 2xl:text-[20px] text-base text-white"
+                  >Home</a
+                >
+                <span class="text-white text-2xl">|</span>
+
+                <a
+                  href="frame3.html"
+                  class="cursor-pointer 2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap"
+                  >Servers & Pricing</a
+                >
+                <span class="text-white text-2xl">|</span>
+                <a
+                  href="frame4.html"
+                  class="2xl:text-[20px] text-base text-white"
+                  >Support</a
+                >
+                <span class="text-white text-2xl">|</span>
+                <a
+                  href="frame2.html"
+                  class="2xl:text-[20px] text-base text-white 2xl:whitespace-nowrap"
+                  >More Info</a
+                >
               </div>
             </div>
           </div>
